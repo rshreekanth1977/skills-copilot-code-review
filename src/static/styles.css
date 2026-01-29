@@ -73,6 +73,78 @@ header h2 {
   font-size: 1.2rem;
 }
 
+/* Announcement Banner Styles */
+.announcement-banner {
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
+  color: var(--secondary-text);
+  padding: 12px 20px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.announcement-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  max-width: 100%;
+}
+
+.announcement-icon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.announcement-text {
+  flex: 1;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.close-banner {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: var(--secondary-text);
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  line-height: 1;
+  transition: background-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.close-banner:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.close-banner:active {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.close-icon {
+  display: block;
+  font-weight: bold;
+}
+
+.announcement-banner.hidden {
+  display: none;
+}
+
 main {
   display: flex;
   flex-wrap: wrap;
@@ -664,3 +736,4 @@ footer {
 #logout-button:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
+
